@@ -1,0 +1,160 @@
+<div>
+    <h1>{{title}}</h1>
+    <h4>My favorite hero is {{favHero.name}}</h4>
+    <p>Heroes:</p>
+    <ul>
+        <li *ngFor="let hero of heroes">
+            {{hero.name}}
+        </li>
+    </ul>
+    <p *ngIf="heroes.length > 3">There are many heroes!</p>
+</div>
+<hr>
+<div>
+    <h1>NgSwitch with Heroes</h1>
+    <div>Pick your favorite Hero</div>
+    <p>
+        <label *ngFor="let h of heroes">
+        <input type="radio" name="heroes" [(ngModel)]="favHero" [value]="h">{{h.name}}
+      </label>
+        <label><input type="radio" name="heroes" (click)="favHero = null">None of the above</label>
+    </p>
+    <div [ngSwitch]="favHero?.emotion">
+        <epic-hero *ngSwitchCase="'epic'" [hero]="favHero"></epic-hero>
+        <angry-hero *ngSwitchCase="'angry'" [hero]="favHero"></angry-hero>
+        <amused-hero *ngSwitchCase="'amused'" [hero]="favHero"></amused-hero>
+        <confused-hero *ngSwitchCase="'confused'" [hero]="favHero"></confused-hero>
+        <unknown-hero *ngSwitchDefault [hero]="favHero"></unknown-hero>
+    </div>
+</div>
+<hr>
+<h1>Ng-Container with Heroes</h1>
+<div>
+    <button (click)="hero = favHero ? null : heroes[0]">Toggle hero</button>
+    <p>
+        I turned the corner
+        <ng-container *ngIf="favHero">
+            and saw {{favHero.name}}. I waved
+        </ng-container>
+        and continued my way.
+    </p>
+</div>
+<div>
+    <div>
+        Pick your favorite hero (
+        <label><input type="checkbox" checked (change)="showAngry = !showAngry">show angry</label>)
+    </div>
+    <select [(ngModel)]="favHero">
+  <ng-container *ngFor="let h of heroes">
+    <ng-container *ngIf="showAngry || h.emotion !== 'angry'">
+      <option [ngValue]="h">{{h.name}} ({{h.emotion}})</option>
+    </ng-container>
+  </ng-container>
+</select>
+</div>
+<hr>
+<div>
+    <h1>Attribute Directive Fundamental</h1>
+
+    <h4>Pick a highlight color</h4>
+    <div>
+        <input type="radio" name="colors" (click)="color='lightgreen'">Green
+        <input type="radio" name="colors" (click)="color='yellow'">Yellow
+        <input type="radio" name="colors" (click)="color='cyan'">Cyan
+    </div>
+    <p myHighlight>Highlight me!</p>
+    <p myHighlight="yellow">Highlighted in yellow</p>
+    <p [myHighlight]="'orange'">Highlighted in orange</p>
+    <p [myHighlight]="color">Highlighted in the picked highlight color</p>
+    <p [myHighlight]="color" defaultColor="violet">Yet another highlighted paragraph...</p>
+</div>
+<hr>
+<div>
+    <h1>Structural Directive Fundamental</h1>
+    <p>
+        The condition is currently
+        <span [ngClass]="{ 'a': !condition, 'b': condition, 'unless': true }">{{condition}}</span>
+        <button (click)="condition = !condition" [ngClass]="{ 'a': condition, 'b': !condition }">
+          Toggle condition to {{condition ? 'false' : 'true'}}
+        </button>
+    </p>
+    <p *myUnless="condition" class="unless a">
+        (A) This paragraph is displayed because the condition is false.
+    </p>
+    <p *myUnless="!condition" class="unless b">
+        (B) Although the conditon is true, this paragraph is displayed becuase myUnless is set to false.
+    </p>
+</div>
+<hr>
+<div>
+    <h1>Pipes Fundamental</h1>
+    <hero-birthday></hero-birthday>
+    <power-booster></power-booster>
+    <power-booster-calculator></power-booster-calculator>
+    <flying-heroes></flying-heroes>
+    <flying-heroes-impure></flying-heroes-impure>
+    <hero-message></hero-message>
+    <hero-list></hero-list>
+</div>
+<hr>
+<div>
+    <h1>Animations Fundamental</h1>
+    <hero-team-builder></hero-team-builder>
+</div>
+<hr>
+<div>
+    <h1>User Input Fundametal</h1>
+    <click-me></click-me>
+    <h4>Keyup V1</h4>
+    <keyup1></keyup1>
+    <h4>Keyup V1 with Template Reference</h4>
+    <loop-back></loop-back>
+    <h4>Keyup V2</h4>
+    <keyup2></keyup2>
+    <h4>Keyup V3</h4>
+    <keyup3></keyup3>
+    <h4>Keyup V4</h4>
+    <keyup4></keyup4>
+    <h2>Little Tour of Heroes</h2>
+    <little-tour></little-tour>
+</div>
+<hr>
+<div>
+    <h1>Forms Fundamental: Template-driven Forms</h1>
+    <hero-form></hero-form>
+</div>
+<hr>
+<div>
+    <h1>Forms Fundamental: Reactive Forms</h1>
+    <hero-reactive-list></hero-reactive-list>
+</div>
+<hr>
+<div>
+    <h1>Forms Fundamental: Dynamic Forms</h1>
+    <h2>Job Application for Heroes</h2>
+    <dynamic-form [questions]=" questions "></dynamic-form>
+</div>
+<hr>
+<div>
+    <app-title [subtitle]="subtitle "></app-title>
+    <nav>
+        <a routerLink="contact " routerLinkActive="active ">Contact</a>
+        <a routerLink="crisis " routerLinkActive="active ">Crisis Center</a>
+        <a routerLink="heroes " routerLinkActive="active ">Heroes</a>
+    </nav>
+    <router-outlet></router-outlet>
+</div>
+<hr>
+<div>
+    <my-car></my-car>
+    <my-injectors></my-injectors>
+    <my-tests></my-tests>
+    <h2>User</h2>
+    <p id="user">
+        {{userInfo}}
+        <button (click)="nextUser()">Next User</button>
+    </p>
+    <my-heroes id="authorized" *ngIf="isAuthorized"></my-heroes>
+    <my-heroes id="unauthorized" *ngIf="!isAuthorized"></my-heroes>
+    <my-providers></my-providers>
+</div>

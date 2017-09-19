@@ -1,0 +1,6 @@
+[
+    { "name": "Magneto", "canFly": false },
+    { "name": "Wolverine", "canFly": false },
+    { "name": "Ironman", "canFly": true },
+    { "name": "Spiderman", "canFly": false }
+]
