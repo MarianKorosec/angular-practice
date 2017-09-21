@@ -25,6 +25,12 @@ export class DIHero {
   isSecret = false;
 }
 
+export class HeroTax {
+  id: number;
+  name: string;
+  tid: string; // Tax ID
+}
+
 export class Address {
   street = '';
   city = '';
