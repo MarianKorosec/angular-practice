@@ -5,7 +5,7 @@ let nextID = 100;
 export class HeroTaxReturn {
   constructor(
     public id = nextID++,
-    public hero = HeroTax,
+    public hero: HeroTax,
     public income = 0 ) {
       if (id === 0) { id = nextID++; }
     }

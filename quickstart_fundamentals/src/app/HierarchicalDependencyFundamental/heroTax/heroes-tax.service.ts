@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Rx';
+import { Observer } from 'rxjs/Observer';
 
-import { HeroTaxReturn } from './hero-tax-return';
 import { HeroTax } from './../../core/hero';
+import { HeroTaxReturn } from './hero-tax-return';
 
 @Injectable()
-export class TaxHeroService {
+export class HeroesTaxService {
   heroes: HeroTax[] = [
     { id: 1, name: 'The Hulk', tid: '123-456-7890'},
     { id: 2, name: 'Thor', tid: '098-765-4321'}
@@ -25,7 +25,7 @@ export class TaxHeroService {
     });
   }
 
-  getTaxReturn(hero: HeroTax): Observable<HeroTaxReturn[]> {
+  getTaxReturn(hero: HeroTax): Observable<HeroTaxReturn> {
     return new Observable<HeroTaxReturn>((observer: Observer<HeroTaxReturn>) => {
       const htr = this.heroTaxReturns.find(t => t.hero.id === hero.id);
       observer.next(htr || new HeroTaxReturn(0, hero));
@@ -43,6 +43,6 @@ export class TaxHeroService {
       }
       observer.next(heroTaxReturn);
       observer.complete();
-    })
+    });
   }
 }

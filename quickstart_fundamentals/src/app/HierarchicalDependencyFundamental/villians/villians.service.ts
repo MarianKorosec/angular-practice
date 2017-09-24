@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { of } from 'rxjs/observable/of';
 
-export interface Villain {id: number, name: string};
+export interface Villain { id: number; name: string; };
 
 @Injectable()
 export class VillainsService {

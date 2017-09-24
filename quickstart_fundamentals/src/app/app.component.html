@@ -136,6 +136,7 @@
 </div>
 <hr>
 <div>
+    <h1>NGModules Fundamental</h1>
     <app-title [subtitle]="subtitle "></app-title>
     <nav>
         <a routerLink="contact " routerLinkActive="active ">Contact</a>
@@ -146,6 +147,7 @@
 </div>
 <hr>
 <div>
+    <h1>Dependency Injection (DI) Fundamental</h1>
     <my-car></my-car>
     <my-injectors></my-injectors>
     <my-tests></my-tests>
@@ -157,4 +159,19 @@
     <my-heroes id="authorized" *ngIf="isAuthorized"></my-heroes>
     <my-heroes id="unauthorized" *ngIf="!isAuthorized"></my-heroes>
     <my-providers></my-providers>
+</div>
+<div>
+    <h1>DI Fundamental: Hierarchical DI</h1>
+    <label>
+      <input type="checkbox" [checked]="showHeroes" (change)="showHeroes = !showHeroes">Heroes
+    </label>
+    <label>
+        <input type="checkbox" [checked]="showVillains" (change)="showVillains = !showVillains">Villains
+      </label>
+    <label>
+          <input type="checkbox" [checked]="showCars" (change)="showCars = !showCars">Cars
+    </label>
+    <p>Placeholder: Cars List</p>
+    <heroes-list *ngIf="showHeroes"></heroes-list>
+    <villains-list *ngIf="showVillains"></villains-list>
 </div>

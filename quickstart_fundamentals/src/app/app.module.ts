@@ -10,6 +10,7 @@ import { UserInputFundamentalModule } from './UserInputFundamental/user-input-fu
 import { FormsFundamentalModule } from './FormsFundamental/forms-fundamental.module';
 import { ContactModule } from './NgModuleFundamental/contact/contact.module';
 import { DIFundamentalModule } from './DIFundamental/di-fundamental.module';
+import { HierarchicalFundamentalModule } from './HierarchicalDependencyFundamental/hierarchical-fundamental.module';
 
 import { AppComponent }  from './app.component';
 
@@ -24,7 +25,8 @@ import { AppComponent }  from './app.component';
     UserInputFundamentalModule,
     FormsFundamentalModule,
     ContactModule,
-    DIFundamentalModule
+    DIFundamentalModule,
+    HierarchicalFundamentalModule
   ],
   declarations: [ AppComponent  ],
   bootstrap: [ AppComponent ]

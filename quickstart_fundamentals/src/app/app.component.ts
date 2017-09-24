@@ -38,6 +38,11 @@ export class AppComponent  {
   // DI Fundamental
   diTitle: string;
 
+  // Hierarchicak Injection Fundamental
+  showCars = true;
+  showHeroes = true;
+  showVillains = true;
+
   constructor(service: QuestionService,
               @Inject(APP_CONFIG) config: AppConfig,
               private userService: DIUserService) {
