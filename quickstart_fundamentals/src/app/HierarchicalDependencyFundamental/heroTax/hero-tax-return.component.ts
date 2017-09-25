@@ -31,7 +31,7 @@ export class HeroTaxReturnComponent {
     this.heroTaxReturnService.restoreTaxReturn();
   }
 
-  onClose() { this.close.emit(); }
+  onClosed() { this.close.emit(); }
 
   onSaved() {
     this.flashMessage('Saved');

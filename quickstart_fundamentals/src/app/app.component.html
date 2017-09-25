@@ -171,7 +171,7 @@
     <label>
           <input type="checkbox" [checked]="showCars" (change)="showCars = !showCars">Cars
     </label>
-    <p>Placeholder: Cars List</p>
+    <my-cars *ngIf="showCars"></my-cars>
     <heroes-list *ngIf="showHeroes"></heroes-list>
     <villains-list *ngIf="showVillains"></villains-list>
 </div>

@@ -43,7 +43,7 @@ fieldset {
     text-align: center;
 }
 
-.msg-canceled {
+.msg.canceled {
     color: white;
     background-color: red;
 }
