@@ -160,6 +160,7 @@
     <my-heroes id="unauthorized" *ngIf="!isAuthorized"></my-heroes>
     <my-providers></my-providers>
 </div>
+<hr>
 <div>
     <h1>DI Fundamental: Hierarchical DI</h1>
     <label>
@@ -174,4 +175,22 @@
     <my-cars *ngIf="showCars"></my-cars>
     <heroes-list *ngIf="showHeroes"></heroes-list>
     <villains-list *ngIf="showVillains"></villains-list>
+</div>
+<hr>
+<div>
+    <h1>DI in Action</h1>
+    <h2>DI Cookbook</h2>
+    <div class="di-component">
+        <h3>Logged in user</h3>
+        <div>Name: {{userContext.name}}</div>
+        <div>Role: {{userContext.role}}</div>
+    </div>
+    <div class="di-component">
+        <h3>Hero Bios</h3>
+        <hero-bios></hero-bios>
+    </div>
+    <div class="di-component">
+        <h3>Hero Bios and Contacts</h3>
+        <hero-bios-and-contacts></hero-bios-and-contacts>
+    </div>
 </div>

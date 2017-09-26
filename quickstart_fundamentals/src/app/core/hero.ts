@@ -31,6 +31,14 @@ export class HeroTax {
   tid: string; // Tax ID
 }
 
+export class ActionHero {
+  constructor(
+    public id: number,
+    public name: string,
+    public description?: string,
+    public phone?: string) { }
+}
+
 export class Address {
   street = '';
   city = '';

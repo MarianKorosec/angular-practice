@@ -13,6 +13,7 @@ import { DIFundamentalModule } from './DIFundamental/di-fundamental.module';
 import { HierarchicalFundamentalModule } from './HierarchicalDependencyFundamental/hierarchical-fundamental.module';
 
 import { AppComponent }  from './app.component';
+import { DiInActionModule } from './DiInAction/di-in-action.module';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { AppComponent }  from './app.component';
     FormsFundamentalModule,
     ContactModule,
     DIFundamentalModule,
-    HierarchicalFundamentalModule
+    HierarchicalFundamentalModule,
+    DiInActionModule
   ],
   declarations: [ AppComponent  ],
   bootstrap: [ AppComponent ]

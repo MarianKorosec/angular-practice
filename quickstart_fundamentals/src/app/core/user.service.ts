@@ -1,4 +1,3 @@
-import { LoggerService } from './logger.service';
 import { Injectable, Optional } from '@angular/core';
 
 let nextId = 1;
@@ -36,33 +35,5 @@ export class DIUserService {
 
   getNewUser() {
     return this.user = this.user === thomas ? max : thomas;
-  }
-}
-
-@Injectable()
-export class DiActionUserService {
-  getUserById(userId: number): any {
-    return {name: 'Professor X', role: 'Admin'};
-  }
-}
-
-@Injectable()
-export class UserContextService {
-  name: string;
-  role: string;
-  loggedInSince: Date;
-
-  constructor(
-    private userService: DiActionUserService,
-    private loggerService: LoggerService) {
-      this.loggedInSince = new Date();
-    }
-
-  loadUser(userId: number) {
-    let user = this.userService.getUserById(userId);
-    this.name = user.name;
-    this.role = user.role;
-
-    this.loggerService.logDebug('loaded User');
   }
 }

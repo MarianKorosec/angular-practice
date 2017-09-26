@@ -1,3 +1,4 @@
+
 import { Component, Inject } from '@angular/core';
 
 import { QuestionService } from './FormsFundamental/question.service';
@@ -8,11 +9,15 @@ import { DIUserService } from './core/user.service';
 
 import { APP_CONFIG, AppConfig } from './DIFundamental/app.config';
 
+import { LoggerService } from './DiInAction/logger.service';
+import { DiActionUserService } from './DiInAction/user.service';
+import { UserContextService } from './DiInAction/user-context.service';
+
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ],
-  providers: [ QuestionService, Logger ]
+  providers: [ QuestionService, Logger, LoggerService, DiActionUserService, UserContextService ]
 })
 export class AppComponent  {
   // Tour of Heroes
@@ -43,11 +48,19 @@ export class AppComponent  {
   showHeroes = true;
   showVillains = true;
 
+  // DI in Action
+  private userId = 1;
+
   constructor(service: QuestionService,
               @Inject(APP_CONFIG) config: AppConfig,
-              private userService: DIUserService) {
+              private userService: DIUserService,
+              public userContext: UserContextService,
+              logger: LoggerService
+            ) {
     this.questions = service.getQuestions();
     this.diTitle = config.title;
+    userContext.loadUser(this.userId);
+    logger.logInfo('AppComponent initialized');
   }
 
   trackById(index: number, hero: Hero): number { return hero.id; }
