@@ -1,7 +1,7 @@
 import { Component, Host, Optional } from '@angular/core';
 
-import { HeroCacheService } from './hero-cache.service';
-import { LoggerService } from './../logger.service';
+import { HeroCacheService } from '../Services/hero-cache.service';
+import { LoggerService } from '../Services/logger.service';
 
 @Component({
   selector: 'hero-contact',
@@ -21,7 +21,7 @@ export class HeroContactComponent {
     @Optional()
     private logger: LoggerService
   ) {
-    if( logger ) {
+    if (logger) {
       this.hasLogger = true;
       logger.logInfo('HeroContactComponent can log!');
     }

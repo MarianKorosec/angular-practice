@@ -1,4 +1,4 @@
-import { HeroCacheService } from './hero-cache.service';
+import { HeroCacheService } from '../Services/hero-cache.service';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({

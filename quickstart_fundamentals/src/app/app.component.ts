@@ -9,9 +9,9 @@ import { DIUserService } from './core/user.service';
 
 import { APP_CONFIG, AppConfig } from './DIFundamental/app.config';
 
-import { LoggerService } from './DiInAction/logger.service';
-import { DiActionUserService } from './DiInAction/user.service';
-import { UserContextService } from './DiInAction/user-context.service';
+import { LoggerService } from './DiInAction/Services/logger.service';
+import { DiActionUserService } from './DiInAction/Services/user.service';
+import { UserContextService } from './DiInAction/Services/user-context.service';
 
 @Component({
   selector: 'my-app',

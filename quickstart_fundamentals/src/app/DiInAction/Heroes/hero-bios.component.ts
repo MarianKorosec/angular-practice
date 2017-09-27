@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { HeroService } from './hero.service';
-import { LoggerService } from '../logger.service';
+import { HeroService } from '../Services/hero.service';
+import { LoggerService } from '../Services/logger.service';
 
 @Component({
   selector: 'hero-bios',
