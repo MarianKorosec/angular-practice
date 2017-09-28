@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { ParentFinderModule } from './parent-finder.module';
+
 import { HeroesBaseComponent, SortedHeroesComponent } from './Heroes/sorted-heroes.component';
 import { HeroContactComponent } from './Heroes/hero-contact.component';
 import { HeroBioComponent } from './Heroes/hero-bio.component';
@@ -11,25 +13,32 @@ import { HeroOfTheMonthComponent } from './Heroes/hero-of-the-month.component';
 
 import { HighlightDirective } from './highlight.directive';
 
+const heroDeclarations = [
+  HeroesBaseComponent, SortedHeroesComponent,
+  HeroBioComponent, HeroBiosComponent, HeroBiosAndContactsComponent,
+  HeroContactComponent,
+  HeroOfTheMonthComponent
+];
+
+const heroExports = [
+  HeroesBaseComponent, SortedHeroesComponent,
+  HeroBiosComponent, HeroBiosAndContactsComponent,
+  HeroOfTheMonthComponent
+];
+
 @NgModule({
-  imports: [ CommonModule, FormsModule, HttpModule ],
+  imports: [ CommonModule, FormsModule, HttpModule,
+    ParentFinderModule
+   ],
   declarations: [
-    HeroesBaseComponent,
-    HeroBioComponent,
-    HeroContactComponent,
-    HeroBiosComponent,
-    HeroBiosAndContactsComponent,
-    HeroOfTheMonthComponent,
-    SortedHeroesComponent,
+    heroDeclarations,
 
     HighlightDirective
   ],
   exports: [
-    HeroBiosComponent,
-    HeroBiosAndContactsComponent,
-    HeroOfTheMonthComponent,
-    HeroesBaseComponent,
-    SortedHeroesComponent,
+    ParentFinderModule,
+
+    heroExports,
 
     HighlightDirective
   ],
