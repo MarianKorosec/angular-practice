@@ -13,9 +13,9 @@ This is the final version of the project (thus far), it shouldn't change anymore
 Project state until Dependcy Injection Fundamental: [Dependency Injection Branch]
 
 # Routing and Navigation Fundamental
-This Branch adds a new Project to the Repository. The Routing and Navigation Angular Fundamental is pretty extensive and therefore a Angular project was my most favorable choice.  
+This Branch adds a new Project to the Repository. The Routing and Navigation Angular Fundamental is pretty extensive and therefore a new Angular project was my most favorable choice.  
 New Project for Routing and Navigation Fundamental: [Routing and Navigation Branch] 
 
 [Initial Project Branch]: https://github.com/MarianKorosec/angular-practice/tree/InitialProject
-[Dependency Injection Branch]: https://github.com/MarianKorosec/angular-practice/tree/InitialProject
+[Dependency Injection Branch]: https://github.com/MarianKorosec/angular-practice/tree/DependencyInjection
 [Routing and Navigation Branch]: https://github.com/MarianKorosec/angular-practice/tree/RoutingAndNavigation
