@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/Observable/of';
+import { Observable } from 'rxjs/observable';
+import { of } from 'rxjs/observable/of';
 import 'rxjs/add/operator/delay';
 
 import { ReactiveHero, reactiveHeroes } from '../core/hero';
