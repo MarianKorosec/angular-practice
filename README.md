@@ -17,5 +17,5 @@ This Branch adds a new Project to the Repository. The Routing and Navigation Ang
 New Project for Routing and Navigation Fundamental: [Routing and Navigation Branch] 
 
 [Initial Project Branch]: https://github.com/MarianKorosec/angular-practice/tree/InitialProject
-[Dependency Injection Branch]: https://github.com/MarianKorosec/angular-practice/tree/InitialProject
+[Dependency Injection Branch]: https://github.com/MarianKorosec/angular-practice/tree/DependencyInjection
 [Routing and Navigation Branch]: https://github.com/MarianKorosec/angular-practice/tree/RoutingAndNavigation
