@@ -17,7 +17,41 @@
     <link href="./bandPageStyles.css" rel="stylesheet">
 </head>
 
-<body>
+<body id="bandPage" data-spy="scroll" data-target="#bandNavbar" data-offset="50">
+    <!-- Navbar-->
+    <nav id="bandNavbar" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Best Band Evooor</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggleBandNavbar">
+            <span class="icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="toggleBandNavbar">
+            <ul class="nav navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#bandPage">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#band">BAND</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tour">TOUR</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">CONTACT</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">MORE</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Merchandise</a>
+                        <a class="dropdown-item" href="#">Extras</a>
+                        <a class="dropdown-item" href="#">Media</a>
+                    </div>
+                </li>
+                <li><a class="nav-link" href="#">Search</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
     <div id="bandCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#bandCarousel" data-slide-to="0" class="active"></li>
@@ -61,7 +95,8 @@
         </a>
     </div>
 
-    <div class="container text-center">
+    <!-- Band Introduction -->
+    <div id="band" class="container text-center">
         <h3>BEST BAND EVOOOR</h3>
         <p><em>We love Music!</em></p>
         <p>We even have our own website! Lorem ipsum..</p>
@@ -99,6 +134,136 @@
                     <p>"Tell my kids I rock!"</p>
                     <p>Part of the band since 2002</p>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tour Infos -->
+    <div id="tour" class="bg-1">
+        <div class="container">
+            <h3 class="text-center">Tour Dates</h3>
+            <p class="text-center">We'll play some awesome lorem ipsum music.<br>Don't forget to buy tickets before they are sold out!</p>
+
+            <ul class="list-group">
+                <li class="list-group-item">September <span class="badge badge-danger">Sold out!</span></li>
+                <li class="list-group-item">October <span class="badge badge-danger">Sold out!</span></li>
+                <li class="list-group-item">November <span class="badge badge-pill badge-secondary float-right">3</span></li>
+            </ul>
+
+            <div class="row text-center tour">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img class="card-img-top" src="./assets/city1.jpg" alt="Cartoonia" width="400" height="300">
+                        <div class="card-block">
+                            <p class="card-title"><strong>Cartoonia</strong></p>
+                            <p class="card-text">Fri. 3 November 2017</p>
+                            <button class="btn" data-toggle="modal" data-target="#buyTicketsModal">Buy Tickets</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img class="card-img-top" src="./assets/city2.jpg" alt="Paintington" width="400" height="300">
+                        <div class="card-block">
+                            <p class="card-title"><strong>Paintington</strong></p>
+                            <p class="card-text">Sat. 4 November 2017</p>
+                            <button class="btn" data-toggle="modal" data-target="#buyTicketsModal">Buy Tickets</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img class="card-img-top" src="./assets/city3.jpg" alt="Animatio" width="400" height="300">
+                        <div class="card-block">
+                            <p class="card-title"><strong>Animatio</strong></p>
+                            <p class="card-text">Sun, 5 November 2017</p>
+                            <button class="btn" data-toggle="modal" data-target="#buyTicketsModal">Buy Tickets</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buy Tickets Modal -->
+    <div id="buyTicketsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center">Tickets</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="ticketCount">30€ per ticket</span></label>
+                            <input type="number" class="form-control" id="ticketCount" placeholder="Enter number of tickets">
+                        </div>
+                        <div class="form-group">
+                            <label for="buyer">Send to</span></label>
+                            <input type="text" class="form-control" id="buyer" placeholder="Enter email">
+                        </div>
+                        <button type="submit" class="btn btn-block">Pay</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger btn-defaul float-nonce" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact section -->
+    <div id="contact" class="container">
+        <h3 class="text-center">Contact</h3>
+        <p class="text-center"><em>We love our cartoony fans!</em></p>
+        <div class="row">
+            <div class="col-md-4">
+                <p>Fan? Text us! We well totally reply!</p>
+                <p>DownTown Cartoony, Cartoonyland</p>
+                <p>Phone: +12 345678910</p>
+                <p>Email: bestbandevooor@carto.on</p>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-sm-6 from-group">
+                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                    </div>
+                    <div class="col-sm-6 from-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                    </div>
+                </div>
+                <textarea class="form-control" id="comments" name="comments" placeholder="Comments" rows="5"></textarea>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <button class="btn float-right" type="submit">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Quotes -->
+        <br>
+        <h3 class="text-center">From the Blog</h3>
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#siegfried" role="tab">Siegfried</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#guenther" role="tab">Günther</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#sebastian" role="tab">Sebastian</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="siegfried" class="tab-pane fade show active" role="tabpanel">
+                <h2>Siegfried Sänger, Frontman and Bass Player</h2>
+                <p><i>"Koks und N*tten!" (Translation: "Coke and H*es!")</i></p>
+            </div>
+            <div id="guenther" class="tab-pane fade" role="tabpanel">
+                <h2>Günther Gitarrist, Guitarist</h2>
+                <p><i>"Touring is love, touring is life!"</i></p>
+            </div>
+            <div id="sebastian" class="tab-pane fade" role="tabpanel">
+                <h2>Sebastian Schlagzeuger, Drummer</h2>
+                <p><i>"I'm not even creative enough to have a deep quote"</i></p>
             </div>
         </div>
     </div>

@@ -1,3 +1,43 @@
+.navbar {
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+}
+
+.navbar li a,
+.navbar .navbar-brand {
+    color: #d5d5d5 !important;
+}
+
+.navbar-nav li a:hover {
+    color: #fff !important;
+}
+
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+}
+
+.navbar-dark .navbar-toggle {
+    border-color: transparent;
+}
+
+.open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+}
+
+.dropdown-menu li a {
+    color: black !important;
+}
+
+.dropdown-menu a:hover {
+    background-color: red !important;
+}
+
 .container {
     padding: 80px 120px;
 }
@@ -12,6 +52,15 @@
 
 .person:hover {
     border-color: #f1f1f1;
+}
+
+.carousel-control-prev-icon .carousel-control-next-icon {
+    color: black;
+    font-size: 150%;
+}
+
+.carousel-item {
+    color: black;
 }
 
 .carousel-inner img {
@@ -35,4 +84,81 @@
     .carousel-caption {
         display: none;
     }
+}
+
+.bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+}
+
+.bg-1 h3 {
+    color: #fff;
+}
+
+.bg-1 p {
+    font-style: italic;
+}
+
+.list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.tour {
+    padding-top: 1em;
+}
+
+.card {
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 0;
+}
+
+.card img {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+
+.card p {
+    margin-top: 15px;
+    color: #555;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+}
+
+.btn:hover,
+.btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: black;
+}
+
+.modal-header,
+.modal-titel,
+.close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+}
+
+.modal-header,
+.modal-body {
+    padding: 40px 50px;
+}
+
+.nav-tabs li a {
+    color: #777;
 }
