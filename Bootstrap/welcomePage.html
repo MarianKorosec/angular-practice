@@ -1,33 +1,32 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Prototyp für die Webapplikation der EV-Wallbox">
-    <meta name="author" content="Marian Korosec">
-    <link rel="icon" href="./assets/favicon.ico">
 
-    <title>My first Bootstrap page</title>
+    <title>EV Wallbox</title>
+    <link href="./assets/favicon.ico" rel="icon">
 
     <!-- Bootstrap CSS -->
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="./deviceInfo.css" rel="stylesheet">
 </head>
 
 <body>
-
+    <!-- Welcome Page -->
     <div class="container">
-        <h1>My first Bootstrap page.</h1>
-        <p>My first Paragraph on this page.</p>
+        <div class="text-center">
+            <h1>WILLKOMMEN ZU DEINER EIGENEN WALLBOX WEB APPLIKATION</h1>
+            <h4><em>Auto laden leicht gemacht...</em></h4>
+        </div>
     </div>
-
 
     <!-- Bootstrap JavaScript -->
     <!-- Faster loading because JS is placed at the end... -->
     <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script>
-        window.jQuery || document.write('<script src="./node_modules/jquery/dist/jquery.min.js"><\/script>')
-    </script>
     <script src="./node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
