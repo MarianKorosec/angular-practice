@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>EV Wallbox</title>
+    <link href="./assets/favicon.ico" rel="icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="./general.css" rel="stylesheet">
+    <link href="./loading.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Loading Process -->
+    <div class="container">
+        <h1 class="loading-header">Ladeprozess - Eine Übersicht</h1>
+        <div class="loading-body">
+            <h3 class="info-box-header">Auto lädt gerade...</h3>
+            <div class="row info-row">
+                <div class="col-md-12">
+                    <h6>Ladeart:</h6>
+                    <p>1-phasig</p>
+                </div>
+            </div>
+            <div class="row info-row">
+                <div class="col-md-4">
+                    <h6>Aktuelle Ladeleistung:</h6>
+                    <p>6.325,362kW</p>
+                </div>
+                <div class="col-md-4">
+                    <h6>Bei aktuellem Ladestrom:</h6>
+                    <p>27,67A</p>
+                </div>
+                <div class="col-md-4">
+                    <h6>Bei aktueller Effektivspannung:</h6>
+                    <p>228,6V</p>
+                </div>
+            </div>
+            <div class="row info-row">
+                <div class="col-md-6">
+                    <h6>Voraussichtlich geladen in:</h6>
+                    <p>3h 16min</p>
+                </div>
+                <div class="col-md-6">
+                    <h6>Geladen um:</h6>
+                    <p>20:56</p>
+                </div>
+            </div>
+            <div class="row info-row">
+                <div class="col-md-12">
+                    <h5 class="float-left progress-header">Aktueller Ladestand:</h5>
+                    <div class="progress progress-bar-div">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="width: 67%">67%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class=" loading-footer ">
+        <p>In Ladeprozess eingreifen oder eigene erstellen: <a class="btn btn-login " href="./loginPage.html ">Einloggen</a></p>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <!-- Faster loading because JS is placed at the end... -->
+    <script src="./node_modules/jquery/dist/jquery.slim.min.js "></script>
+    <script src="./node_modules/popper.js/dist/umd/popper.min.js "></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js "></script>
+</body>
+
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>EV Wallbox</title>
+    <link href="./assets/favicon.ico" rel="icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="./general.css" rel="stylesheet">
+    <link href="./loading.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Loading Process -->
+    <div class="container">
+        <h1 class="loading-header">Guten Tag, Thomas Test!<br>Dein aktueller Ladeprozess</h1>
+
+        <div class="loading-body">
+            <h3 class="info-box-header">Auto angesteckt, kein laufender Ladeprozess</h3>
+
+            <div class="row info-row">
+                <div class="col-md-12">
+                    <h6>Ladeart:</h6>
+                    <p>3-phasig</p>
+                </div>
+            </div>
+
+            <div class="row info-row">
+                <div class="col-md-6">
+                    <h6>Gewünschte Ladeleistung:</h6>
+                    <div class="input-group demand-input">
+                        <input type="number" class="form-control" placeholder="Leistung in kW" aria-label="Demanded Power" aria-describedby="demanded-power">
+                        <span class="input-group-addon">kW</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h6>Gewünschter Ladestrom:</h6>
+                    <div class="input-group  demand-input">
+                        <input type="number" class="form-control" placeholder="Strom in A" aria-label="Demanded Current" aria-describedby="demanded-current">
+                        <span class="input-group-addon">A</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row info-row">
+                <div class="col-md-4">
+                    <h6>Aktuelle Ladeleistung:</h6>
+                    <p>0,00kW</p>
+                </div>
+                <div class="col-md-4">
+                    <h6>Bei aktuellem Ladestrom:</h6>
+                    <p>0,00A</p>
+                </div>
+                <div class="col-md-4">
+                    <h6>Bei aktueller Effektivspannung:</h6>
+                    <p>0,00V</p>
+                </div>
+            </div>
+
+            <div class="row info-row">
+                <div class="col-md-6">
+                    <h6>Angesteckt um:</h6>
+                    <p>16:20</p>
+                </div>
+                <div class="col-md-6">
+                    <h6>Ladestart um:</h6>
+                    <p>18:00</p>
+                </div>
+            </div>
+
+            <div class="row info-row">
+                <div class="col-md-4">
+                    <h6>Voraussichtlich geladen in:</h6>
+                    <p>-h -min</p>
+                </div>
+                <div class="col-md-4">
+                    <h6>Geladen um:</h6>
+                    <p>--:--</p>
+                </div>
+                <div class="col-md-4">
+                    <h6>Ladestop um:</h6>
+                    <p>23:15</p>
+                </div>
+            </div>
+
+            <div class="row info-row">
+                <div class="col-md-12">
+                    <h5 class="float-left progress-header">Aktueller Ladestand:</h5>
+                    <div class="progress progress-bar-div">
+                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%">33%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="processes">
+                <h4 class="process-header">Ladeprozess erstellen oder bearbeiten</h4>
+                <div class="dropdown">
+                    <button class="btn btn-bright-blue dropdown-toggle process-button" type="button" id="editLoadingProcess" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Gespeicherte Prozesse
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="editLoadingProcess">
+                        <a class="dropdown-item" href="#editProcessModal" data-toggle="modal">Auto Thomas</a>
+                        <a class="dropdown-item" href="#editProcessModal" data-toggle="modal">Nach Arbeit</a>
+                        <a class="dropdown-item" href="#editProcessModal" data-toggle="modal">Lara Ladevorgang</a>
+                    </div>
+                </div>
+                <a class="btn btn-bright-blue process-button" role="button" href="#newProcessModal" data-toggle="modal">Neuer Prozess</u></a>
+
+            </div>
+        </div>
+
+        <footer class="loading-footer">
+            <p>Wallbox Web Applikation - Der komfortabelste Weg dein E-Auto zu laden...</p>
+        </footer>
+    </div>
+
+
+    <!-- New Process Modal -->
+    <div class="modal fade" id="newProcessModal" tabindex="-1" role="dialog" aria-labelledby="newProcessModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Neuen Ladevorgang erstellen</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form role="form">
+
+                            <div class="row modal-row">
+                                <div class="col-sm-12">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" value="fullyLoad">
+                                                Voll Laden
+                                            </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row modal-row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="start">Gewünschter Ladestart</span></label>
+                                        <input type="time" class="form-control modal-input" id="startTime">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="stop">Gewünschter Ladestop</span></label>
+                                        <input type="time" class="form-control modal-input" id="stopTime">
+                                        <small id="stopHelper" class="form-text text-muted">
+                                                Wenn Auto voll geladen werden soll, bitte leer lassen.
+                                            </small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <legend class="col-form-legend col-sm-12">Verwendete Phasen</legend>
+                            </div>
+                            <div class="row modal-row">
+                                <div class="col-sm-12">
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="inputRadios" id="phaseRadio1" value="1phase">
+                                                1-phasig
+                                            </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="inputRadios" id="phaseRadio2" value="3phases">
+                                                3-phasig
+                                            </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <legend class="col-form-legend col-sm-12">Ladestärke</legend>
+                            </div>
+                            <div class="row modal-row">
+                                <div class="col-sm-12">
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="inputRadios" id="inputTypeRadio1" value="power">
+                                                Ladestärke mittels Leistung
+                                            </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="inputRadios" id="inputTypeRadio2" value="current">
+                                                Ladestärke mittels Strom
+                                            </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row modal-row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="current" class="float-left">Gewünschter Ladestrom</label>
+                                        <div class="input-group modal-demand-value">
+                                            <input type="number" class="form-control" id="current" placeholder="Leistung in kW">
+                                            <span class="input-group-addon">kW</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="staticCurrent" class="float-left">Resultierender Ladestrom</label>
+                                        <input type="number" readonly class="form-control-plaintext" id="staticCurrent" placeholder="I = U/P">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row modal-row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="current" class="float-left">Gewünschter Ladestrom</label>
+                                        <div class="input-group modal-demand-value">
+                                            <input type="number" class="form-control" id="current" placeholder="Strom in A">
+                                            <span class="input-group-addon">A</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="staticPower" class="float-left">Resultierende Ladeleistung</label>
+                                        <input type="number" readonly class="form-control-plaintext" id="staticPower" placeholder="P = U*I">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-block">Starten</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Speichern</button>
+                    <button type="submit" class="btn btn-danger" data-dismiss="modal">Abbrechen</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Process Modal -->
+    <div class="modal fade" id="editProcessModal" tabindex="-1" role="dialog" aria-labelledby="newProcessModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Ladevorgang bearbeiten</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form role="form">
+
+                            <div class="row modal-row">
+                                <div class="col-sm-12">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" value="fullyLoad" checked>
+                                            Voll Laden
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row modal-row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="start">Gewünschter Ladestart</span></label>
+                                        <input type="time" class="form-control modal-input" id="startTime" value="12:34">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="stop">Gewünschter Ladestop</span></label>
+                                        <input type="time" class="form-control modal-input" id="stopTime">
+                                        <small id="stopHelper" class="form-text text-muted">
+                                            Wenn Auto voll geladen werden soll, bitte leer lassen.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <legend class="col-form-legend col-sm-12">Verwendete Phasen</legend>
+                            </div>
+                            <div class="row modal-row">
+                                <div class="col-sm-12">
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" name="inputRadios" id="phaseRadio1" value="1phase">
+                                            1-phasig
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" name="inputRadios" id="phaseRadio2" value="3phases" checked>
+                                            3-phasig
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <legend class="col-form-legend col-sm-12">Ladestärke</legend>
+                            </div>
+                            <div class="row modal-row">
+                                <div class="col-sm-12">
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" name="inputRadios" id="inputTypeRadio1" value="power">
+                                            Ladestärke mittels Leistung
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" name="inputRadios" id="inputTypeRadio2" value="current" checked>
+                                            Ladestärke mittels Strom
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row modal-row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="current" class="float-left">Gewünschter Ladestrom</label>
+                                        <div class="input-group modal-demand-value">
+                                            <input type="number" class="form-control" id="current" value="25">
+                                            <span class="input-group-addon">A</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="staticPower" class="float-left">Resultierende Ladeleistung</label>
+                                        <input type="text" readonly class="form-control-plaintext" id="staticPower" value="5,75 kW">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-block">Starten</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Speichern</button>
+                    <button type="submit" class="btn btn-danger" data-dismiss="modal">Abbrechen</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JavaScript -->
+    <!-- Faster loading because JS is placed at the end... -->
+    <script src="./node_modules/jquery/dist/jquery.slim.min.js "></script>
+    <script src="./node_modules/popper.js/dist/umd/popper.min.js "></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js "></script>
+</body>
+
+</html>

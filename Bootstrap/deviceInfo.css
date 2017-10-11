@@ -19,14 +19,14 @@ body {
     margin-left: 10px;
 }
 
-.btn {
+.btn-bright-blue {
     border: 1px solid black;
     background-color: #464A66;
     color: black;
 }
 
-.btn:hover,
-.btn:focus {
+.btn-bright-blue:hover,
+.btn-bright-blue:focus {
     border: 1px solid black;
     background-color: #CACBD3;
     color: black;

@@ -8,3 +8,16 @@ body {
     color: black;
     text-align: center;
 }
+
+.btn-login {
+    border: 1px solid black;
+    background-color: #21243C;
+    color: black;
+}
+
+.btn-login:hover,
+.btn-login:focus {
+    border: 1px solid black;
+    background-color: #B0B1BD;
+    color: black;
+}
