@@ -1,0 +1,28 @@
+.navbar {
+    background-color: #0B4550;
+    opacity: 0.9;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.navbar-nav {
+    letter-spacing: 3px;
+    font-size: 18px;
+}
+
+.navbar li a,
+.navbar .navbar-brand {
+    color: black;
+}
+
+.navbar-nav li a:hover {
+    background-color: #C4DBDF;
+}
+
+.navbar-nav li.active a {
+    color: #C4DBDF;
+    background-color: #041C20;
+}

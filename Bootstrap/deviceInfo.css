@@ -1,18 +1,22 @@
 html,
 body {
     color: black;
-    background-color: #2C3050;
+    background-color: #116F80;
+}
+
+.main-header {
+    font-size: 50px;
 }
 
 .dev-info-header {
-    border-top: 4em solid transparent;
-    border-bottom: 2em solid transparent;
+    margin-top: 4em;
+    margin-bottom: 2em;
 }
 
 .dev-info-body {
     border: 2em solid transparent;
     border-radius: 10px;
-    background: #9597A8;
+    background: #6AA5B0;
 }
 
 .dev-info-body a {
@@ -21,13 +25,13 @@ body {
 
 .btn-bright-blue {
     border: 1px solid black;
-    background-color: #464A66;
+    background-color: #0D5360;
     color: black;
 }
 
 .btn-bright-blue:hover,
 .btn-bright-blue:focus {
     border: 1px solid black;
-    background-color: #CACBD3;
+    background-color: #C4DBDF;
     color: black;
 }

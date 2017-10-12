@@ -1,0 +1,41 @@
+.user-header {
+    font-size: 50px;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.profile-pic {
+    border: 5px solid #0F6170;
+}
+
+.user-name {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-control-plaintext {
+    background-color: #6AA5B0;
+}
+
+.btn-edit {
+    margin: 10px 0;
+    border: 1px solid black;
+    background-color: #2F8190;
+    color: black;
+}
+
+.btn-edit:hover,
+.btn-edit:focus {
+    border: 1px solid black;
+    background-color: #C4DBDF;
+    color: black;
+}
+
+.info-header {
+    margin: 25px 0;
+}
+
+.info-row {
+    margin: 25px 0;
+}

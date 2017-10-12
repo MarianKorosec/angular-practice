@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <!-- Required meta tags -->
@@ -12,16 +12,41 @@
     <!-- Bootstrap CSS -->
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="./navbar.css" rel="stylesheet">
     <link href="./general.css" rel="stylesheet">
     <link href="./loading.css" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="./loadingUser.html">Wallbox</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./loadingUser.html">Ladeprozess <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./loadingUserSimple.html">Einfache Übersicht </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./deviceInfo.html">Geräteinfo </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./user.html">Benutzer </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Loading Process -->
     <div class="container">
         <h1 class="loading-header">Guten Tag, Thomas Test!<br>Dein aktueller Ladeprozess</h1>
 
-        <div class="loading-body">
+        <div class="page-body">
             <h3 class="info-box-header">Auto angesteckt, kein laufender Ladeprozess</h3>
 
             <div class="row info-row">
@@ -114,12 +139,11 @@
 
             </div>
         </div>
-
-        <footer class="loading-footer">
-            <p>Wallbox Web Applikation - Der komfortabelste Weg dein E-Auto zu laden...</p>
-        </footer>
     </div>
 
+    <footer class="loading-footer">
+        <p>Wallbox Web Applikation - Der komfortabelste Weg dein E-Auto zu laden...</p>
+    </footer>
 
     <!-- New Process Modal -->
     <div class="modal fade" id="newProcessModal" tabindex="-1" role="dialog" aria-labelledby="newProcessModalLabel" aria-hidden="true">
@@ -160,8 +184,8 @@
                                         <label for="stop">Gewünschter Ladestop</span></label>
                                         <input type="time" class="form-control modal-input" id="stopTime">
                                         <small id="stopHelper" class="form-text text-muted">
-                                                Wenn Auto voll geladen werden soll, bitte leer lassen.
-                                            </small>
+                                            Wenn Auto voll geladen werden soll, bitte leer lassen.
+                                        </small>
                                     </div>
                                 </div>
                             </div>
@@ -173,15 +197,15 @@
                                 <div class="col-sm-12">
                                     <div class="form-check form-check-inline">
                                         <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="inputRadios" id="phaseRadio1" value="1phase">
-                                                1-phasig
-                                            </label>
+                                            <input class="form-check-input" type="radio" name="inputRadios" id="phaseRadio1" value="1phase">
+                                            1-phasig
+                                        </label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="inputRadios" id="phaseRadio2" value="3phases">
-                                                3-phasig
-                                            </label>
+                                            <input class="form-check-input" type="radio" name="inputRadios" id="phaseRadio2" value="3phases">
+                                            3-phasig
+                                        </label>
                                     </div>
                                 </div>
                             </div>
@@ -193,15 +217,15 @@
                                 <div class="col-sm-12">
                                     <div class="form-check form-check-inline">
                                         <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="inputRadios" id="inputTypeRadio1" value="power">
-                                                Ladestärke mittels Leistung
-                                            </label>
+                                            <input class="form-check-input" type="radio" name="inputRadios" id="inputTypeRadio1" value="power">
+                                            Ladestärke mittels Leistung
+                                        </label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="inputRadios" id="inputTypeRadio2" value="current">
-                                                Ladestärke mittels Strom
-                                            </label>
+                                            <input class="form-check-input" type="radio" name="inputRadios" id="inputTypeRadio2" value="current">
+                                            Ladestärke mittels Strom
+                                        </label>
                                     </div>
                                 </div>
                             </div>
@@ -248,8 +272,8 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-success">Speichern</button>
-                    <button type="submit" class="btn btn-danger" data-dismiss="modal">Abbrechen</button>
+                    <button type="submit" class="btn btn-outline-success">Speichern</button>
+                    <button type="submit" class="btn btn-outline-danger" data-dismiss="modal">Abbrechen</button>
                 </div>
 
             </div>
@@ -365,8 +389,8 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-success">Speichern</button>
-                    <button type="submit" class="btn btn-danger" data-dismiss="modal">Abbrechen</button>
+                    <button type="submit" class="btn btn-outline-success">Speichern</button>
+                    <button type="submit" class="btn btn-outline-danger" data-dismiss="modal">Abbrechen</button>
                 </div>
 
             </div>
