@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>EV Wallbox</title>
+    <link href="./../assets/favicon.ico" rel="icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="./../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="./../css/navbar.css" rel="stylesheet">
+    <link href="./../css/deviceInfo.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="./loadingUser.html">Wallbox</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./loadingUser.html">Ladeprozess </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./loadingUserSimple.html">Einfache Übersicht </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./deviceInfo.html">Geräteinfo <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./user.html">Benutzer </a>
+                </li>
+            </ul>
+            <a class="btn btn-outline-danger btn-sm ml-auto" href="./../index.html">Ausloggen</a>
+        </div>
+    </nav>
+
+    <!-- Device Info -->
+    <div class="container">
+        <div class="text-center dev-info-header">
+            <h1 class="main-header">Geräte Informationen</h1>
+            <h3><i>Ihre Wallbox...</i></h3>
+        </div>
+        <div class="dev-info-body">
+            <h4><img src="./../assets/info.png" height="16" width="16"> Wallbox</h4>
+            <ul>
+                <li>Modell: Prototyp</li>
+                <li>Baujahr: 20xx</li>
+                <li>Serien Nr.: xxx-xxx</li>
+            </ul>
+            <h4><img src="./../assets/info.png" height="16" width="16"> Raspberry</h4>
+            <ul>
+                <li>Modell: 3</li>
+                <li>Betriebssystem: Raspbian</li>
+                <li>IP-Adresse: xxx.xxx.xxx.xxx</li>
+            </ul>
+            <h4><img src="./../assets/info.png" height="16" width="16"> Web-Server</h4>
+            <ul>
+                <li>Software Version: 1.x.x</li>
+                <li>Auf Updates prüfen: <a class="btn btn-bright-blue" data-toggle="modal" data-target="#updateModal">Updatecheck</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Update Modal -->
+    <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nach Update suchen...</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Der Server ist auf dem neuesten Stand.</p>
+                    <hr>
+                    <p>Update(s) gefunden</p>
+                    <p>TODO: Batch-File für automatisches Update oder Anleitung für User</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <!-- Faster loading because JS is placed at the end... -->
+    <script src="./../node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="./../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

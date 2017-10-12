@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>EV Wallbox</title>
+    <link href="./../assets/favicon.ico" rel="icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="./../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="./../css/navbar.css" rel="stylesheet">
+    <link href="./../css/general.css" rel="stylesheet">
+    <link href="./../css/user.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- User Edit -->
+    <div class="container">
+        <h1 class="user-header">Benutzerinfo</h1>
+
+        <div class="page-body">
+            <h3 class="user-name">Benutzer: Thomas Test</h3>
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="./../assets/GuitarPlayer.jpg" class="img-thumbnail profile-pic" height="250" width="250">
+                    <div class="change-picture">
+                        <p class="change-picture-text">Bild ändern</p>
+                        <label class="btn btn-edit"> Durchsuchen
+                            <input type="file" style="display: none;">
+                        </label>
+                    </div>
+                </div>
+                <div class="col-sm-9">
+
+                    <form novalidate>
+
+                        <div class="form-row">
+                            <div class="form-group col-sm-6">
+                                <label for="firstName" class="col-form-label float-left">Vorname </label>
+                                <input type="text" class="form-control" id="firstName" value="Thomas" required>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="firstName" class="col-form-label float-left">Nachname </label>
+                                <input type="text" class="form-control" id="firstName" value="Test" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-sm-12">
+                                <label for="firstName" class="col-form-label float-left">E-Mail </label>
+                                <input type="email" class="form-control" id="firstName" value="thomas.test@test.user" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-sm-12">
+                                <label for="firstName" class="col-form-label float-left">Verwendete Fahrzeug(e) </label>
+                                <input type="text" class="form-control" id="firstName" value="Super E-Auto Over 9000">
+                                <input type="text" class="form-control" id="firstName" value="Electrovehicle Platzhalterwagen">
+                            </div>
+                            <p>Auto hinzufügen: <button type="button" class="btn btn-success">+</button></p>
+                            <p class="ml-auto">Auto entfernen: <button type="button" class="btn btn-danger">-</button></p>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+            <a class="btn btn-edit" href="./user.html">Speichern</u></a>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <!-- Faster loading because JS is placed at the end... -->
+    <script src="./../node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="./../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

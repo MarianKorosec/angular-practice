@@ -1,0 +1,36 @@
+.login-container {
+    padding-top: 10em;
+}
+
+.login-form {
+    max-width: 25em;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.login-form input[type="email"] {
+    border: 1px solid black;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: -1px;
+}
+
+.login-form input[type="password"] {
+    border: 1px solid black;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.remember-box {
+    margin-bottom: 10px;
+}
+
+.login-pswd {
+    color: black;
+    font-size: 12px;
+}
+
+.login-pswd:hover,
+.login-pswd:focus {
+    color: #21243C;
+}

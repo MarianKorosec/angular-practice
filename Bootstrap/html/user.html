@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>EV Wallbox</title>
+    <link href="./../assets/favicon.ico" rel="icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="./../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="./../css/navbar.css" rel="stylesheet">
+    <link href="./../css/general.css" rel="stylesheet">
+    <link href="./../css/user.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="./loadingUser.html">Wallbox</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./loadingUser.html">Ladeprozess </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./loadingUserSimple.html">Einfache Übersicht </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./deviceInfo.html">Geräteinfo </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./user.html">Benutzer <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <a class="btn btn-outline-danger btn-sm ml-auto" href="./loginPage.html">Ausloggen</a>
+        </div>
+    </nav>
+
+    <!-- User Info -->
+    <div class="container">
+        <h1 class="user-header">Benutzerinfo</h1>
+
+        <div class="page-body">
+            <h3 class="user-name">Benutzer: Thomas Test</h3>
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="./../assets/GuitarPlayer.jpg" class="img-thumbnail profile-pic" height="250" width="250">
+                </div>
+                <div class="col-sm-9">
+
+                    <form>
+
+                        <div class="form-row">
+                            <div class="form-group col-sm-6">
+                                <label for="firstName" class="col-form-label float-left">Vorname </label>
+                                <input type="text" readonly class="form-control" id="firstName" value="Thomas">
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="firstName" class="col-form-label float-left">Nachname </label>
+                                <input type="text" readonly class="form-control" id="firstName" value="Test">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-sm-12">
+                                <label for="firstName" class="col-form-label float-left">E-Mail </label>
+                                <input type="email" readonly class="form-control" id="firstName" value="thomas.test@test.user">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-sm-12">
+                                <label for="firstName" class="col-form-label float-left">Verwendete Fahrzeug(e) </label>
+                                <input type="text" readonly class="form-control" id="firstName" value="Super E-Auto Over 9000">
+                                <input type="text" readonly class="form-control" id="firstName" value="Electrovehicle Platzhalterwagen">
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+            <a class="btn btn-edit" href="./userEdit.html">Bearbeiten</u></a>
+
+            <!-- Info Box -->
+            <div>
+                <h3 class="info-header">Ladeinformationen von Thomas Test</h3>
+
+                <div class="row info-row">
+                    <div class="col-md-4">
+                        <h6>Gesamtladezeit:</h6>
+                        <p>642,3 Stunden</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h6>Gesamtladeleistung</h6>
+                        <p>4321,98kW</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h6>Gesamtladevorgänge:</h6>
+                        <p>179</p>
+                    </div>
+                </div>
+
+                <div class="row info-row">
+                    <div class="col-md-6">
+                        <h6>Durchschnittliche Ladezeit:</h6>
+                        <p>3,59 Stunden</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Durchschnittliche Ladeleistung</h6>
+                        <p>24,15kW</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <!-- Faster loading because JS is placed at the end... -->
+    <script src="./../node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="./../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

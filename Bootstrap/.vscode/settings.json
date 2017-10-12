@@ -1,6 +1,8 @@
 {
     "files.exclude": {
         "package-lock.json": true,
-        "node_modules": false
+        "node_modules": true,
+        "old": true,
+        "BootstrapPractice": true
     }
 }

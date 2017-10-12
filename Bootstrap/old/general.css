@@ -1,0 +1,29 @@
+html,
+body {
+    height: 100%;
+    background-color: #116F80;
+}
+
+body {
+    color: black;
+    text-align: center;
+}
+
+.page-body {
+    border: 2em solid transparent;
+    border-radius: 10px;
+    background: #6AA5B0;
+}
+
+.btn-login {
+    border: 1px solid black;
+    background-color: #0D5360;
+    color: black;
+}
+
+.btn-login:hover,
+.btn-login:focus {
+    border: 1px solid black;
+    background-color: #C4DBDF;
+    color: black;
+}
