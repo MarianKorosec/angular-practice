@@ -16,6 +16,12 @@ Project state until Dependcy Injection Fundamental: [Dependency Injection Branch
 This Branch adds a new Project to the Repository. The Routing and Navigation Angular Fundamental is pretty extensive and therefore a new Angular project was my most favorable choice.  
 New Project for Routing and Navigation Fundamental: [Routing and Navigation Branch] 
 
+# Bootstrap
+The Bootstrap Branch includes some Bootstrap practice from W3Schools and also some personal experimenting to facilitate basic knowledge about using Bootstrap to design a Website.  
+However, the main part of this branch consists of the template for the EV-Wallbox Webapplication created with Bootstrap.
+Webapplication template: [Bootstrap Branch] 
+
 [Initial Project Branch]: https://github.com/MarianKorosec/angular-practice/tree/InitialProject
 [Dependency Injection Branch]: https://github.com/MarianKorosec/angular-practice/tree/DependencyInjection
 [Routing and Navigation Branch]: https://github.com/MarianKorosec/angular-practice/tree/RoutingAndNavigation
+[Bootstrap Branch]: https://github.com/MarianKorosec/angular-practice/tree/Bootstrap
