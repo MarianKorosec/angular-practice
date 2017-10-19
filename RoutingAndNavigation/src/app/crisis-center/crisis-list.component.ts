@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
-// import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
-// import { Crisis, CrisisService } from './crisis.service';
-// import { Observable } from 'rxjs/observable';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/switchMap';
+
+import { Crisis, CrisisService } from './crisis.service';
 
 @Component({
   template: `
-  <h2>Crisis Center</h2>
-  <p>Get your crisis here</p>
-  <!-- <ul class="items">
+  <ul class="items">
     <li *ngFor="let crisis of crises$ | async"
       [class.selected]="crisis.id === selectedId">
       <a [routerLink]="[crisis.id]">
@@ -17,24 +17,24 @@ import { Component } from '@angular/core';
     </li>
   </ul>
 
-  <router-outlet></router-outlet> -->
+  <router-outlet></router-outlet>
   `
 })
+export class CrisisListComponent implements OnInit {
+  crises$: Observable<Crisis[]>;
 
-export class CrisisListComponent {
-  // crises$: Observable<Crisis[]>;
-  // selectedId: number;
+  private selectedId: number;
 
-  // constructor(
-  //   private service: CrisisService,
-  //   private route: ActivatedRoute
-  // ) { }
+  constructor(
+    private service: CrisisService,
+    private route: ActivatedRoute
+  ) { }
 
-  // ngOnInit() {
-  //   this.crises$ = this.route.paramMap
-  //       .switchMap((params: ParamMap) => {
-  //         this.selectedId = +params.get('id');
-  //         return this.service.getCrises();
-  //       });
-  // }
+  ngOnInit() {
+    this.crises$ = this.route.paramMap
+      .switchMap((params: ParamMap) => {
+        this.selectedId = +params.get('id');
+        return this.service.getCrises();
+        });
+  }
 }

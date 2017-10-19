@@ -9,7 +9,7 @@ import { slideInDownAnimation } from './../animations';
 
 @Component({
   template: `
-    <h2>HEROES</h2>
+    <h2>HELDEN</h2>
     <div *ngIf="hero$ | async as hero">
       <h3>"{{ hero.name }}"</h3>
       <div>
@@ -20,7 +20,7 @@ import { slideInDownAnimation } from './../animations';
         <input [(ngModel)]="hero.name" placeholder="name"/>
       </div>
       <p>
-        <button (click)="gotoHeroes(hero)">Back</button>
+        <button (click)="gotoHeroes(hero)">Zurück</button>
       </p>
     </div>
   `,

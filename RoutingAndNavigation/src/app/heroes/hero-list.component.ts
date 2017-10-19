@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 
 import { Hero, HeroService }  from './hero.service';
-import { Observable } from 'rxjs/observable';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/switchMap';
 
 @Component({
   template: `
-  <h2>HEROES</h2>
+  <h2>HELDEN</h2>
   <ul class="items">
     <li *ngFor="let hero of heroes$ | async"
       [class.selected]="hero.id === selectedId">
@@ -17,7 +17,7 @@ import 'rxjs/add/operator/switchMap';
     </li>
   </ul>
 
-  <button routerLink="/sidekicks">Go to sidekicks</button>
+  <button routerLink="/sidekicks">Sidekicks</button>
 `
 })
 export class HeroListComponent implements OnInit {
