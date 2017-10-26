@@ -22,7 +22,7 @@ However, the main part of this branch consists of the template for the EV-Wallbo
 Webapplication template: [Bootstrap Branch] 
 
 # Tour Of Heroes
-Tour of Heroes is a Angular Tutorial, which sums up all the Angular features. This Branch includes this Tutorial, as a last step to get to know webdevelopement.
+Tour of Heroes is a Angular Tutorial, which sums up all the Angular features. This Branch includes this Tutorial, as a last step to get to know webdevelopement.  
 Tour of Heroes Tutorial: [Tour of Heroes Branch] 
 
 [Initial Project Branch]: https://github.com/MarianKorosec/angular-practice/tree/InitialProject
