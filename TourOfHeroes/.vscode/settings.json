@@ -1,0 +1,28 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "files.exclude": {
+        "**/node_modules/": false,
+        ".vscode/": true,
+
+        "**/favicon.ico": true,
+		".gitignore": true,
+		"package.json": true,
+
+        "**/.angulardoc.json": true,
+        "**/.editorconfig": true,
+        "**/package-lock.json": true,
+        "**/tsconfig.json": true,
+        "**/tslint.json": true,
+
+        "**/bs-config.json": true,
+        "**/systemjs.config.extras.js": true,
+        "**/systemjs-angular-loader.js": true,
+        "**/systemjs.config.js": false,
+		
+		"**/app.component.spec.ts": true
+
+        "**/*.js": true,
+        "**/*.js.map": true
+    },
+    "git.ignoreLimitWarning": true
+}
